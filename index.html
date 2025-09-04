@@ -10,8 +10,8 @@
 </head>
 
 <body class="bg-black overflow-x-hidden">
-    <header >
-        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <header class="sticky top-0 z-50 bg-black/30 backdrop-blur-sm border-b mx-5 rounded-2xl my-5 border-gray-900/10">
+        <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="md:flex md:items-center md:gap-12 gTopFade">
                     <a class="block" href="#"><img src="src/img/favicon.png" class="max-w-1/5 " alt=""></a>
@@ -28,13 +28,19 @@
             </div>
         </div>
     </header>
-        <nav class="text-white  w-auto flex justify-end  p-4 " style="transform: translateX(60%);">
-            <ul class="bg-neutral-950 p-4 text-3xl leading-16 px-20 rounded-2xl">
-                <li class="gTopFade"><a href="#">Home</a></li>
-                <li class="gTopFade"><a href="#">Projects</a></li>
-                <li class="gTopFade"><a href="#">Contact</a></li>
-            </ul>
+    <div class="fixed top-20 end-5 z-40">
+        <nav class="text-white w-auto justify-end p-4 hidden bg-gray-900/80 backdrop-blur-sm rounded-2xl">
+            <div class="flex justify-end">
+                <ul class=" p-4 text-3xl leading-16 px-20 ">
+                    <li class="gTopFadeLi"><a href="#">Home</a></li>
+                    <li class="gTopFadeLi"><a href="#">Projects</a></li>
+                    <li class="gTopFadeLi"><a href="#">Contact</a></li>
+                </ul>
+            </div>
         </nav>
+    </div>
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="src/script.js"></script>
     <script src="src/gsap.js"></script>
