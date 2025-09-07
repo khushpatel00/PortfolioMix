@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="src/output.css">
 </head>
 
-<body class="bg-black overflow-x-hidden">
+<body id="hoverBG" class=" overflow-x-hidden">
     <header class="sticky top-0 z-50 bg-black/30 backdrop-blur-sm border-b mx-5 rounded-2xl my-5 border-gray-900/10">
         <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
@@ -28,8 +28,8 @@
             </div>
         </div>
     </header>
-    <div class="fixed top-20 end-5 z-40">
-        <nav class="text-white w-auto justify-end p-4 hidden bg-gray-900/80 backdrop-blur-sm rounded-2xl">
+    <div class="fixed top-24 end-5 z-40">
+        <nav class="text-white w-auto justify-end p-4 hidden rounded-2xl">
             <div class="flex justify-end">
                 <ul class=" p-4 text-3xl leading-16 px-20 ">
                     <li class="gTopFadeLi"><a href="#">Home</a></li>
@@ -39,8 +39,10 @@
             </div>
         </nav>
     </div>
+    <section>
+        <div id="dividerLine"></div>
+    </section>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
     <script src="src/script.js"></script>
     <script src="src/gsap.js"></script>
