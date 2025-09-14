@@ -13,6 +13,17 @@
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --text-6xl: 3.75rem;
+    --text-6xl--line-height: 1;
+    --text-7xl: 4.5rem;
+    --text-7xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
+    --tracking-wide: 0.025em;
     --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
     --blur-sm: 8px;
@@ -171,11 +182,11 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .fixed {
     position: fixed;
-  }
-  .sticky {
-    position: sticky;
   }
   .end-5 {
     inset-inline-end: calc(var(--spacing) * 5);
@@ -185,6 +196,9 @@
   }
   .top-24 {
     top: calc(var(--spacing) * 24);
+  }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
   }
   .z-40 {
     z-index: 40;
@@ -217,6 +231,18 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-0\.5 {
+    width: calc(var(--spacing) * 0.5);
+  }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
+  .w-\[98\%\] {
+    width: 98%;
+  }
   .w-auto {
     width: auto;
   }
@@ -228,6 +254,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
@@ -250,6 +279,9 @@
     @supports (color: color-mix(in lab, red, red)) {
       border-color: color-mix(in oklab, var(--color-gray-900) 10%, transparent);
     }
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-black\/30 {
     background-color: color-mix(in srgb, #000 30%, transparent);
@@ -276,9 +308,17 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
   .leading-16 {
     --tw-leading: calc(var(--spacing) * 16);
     line-height: calc(var(--spacing) * 16);
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
   }
   .text-white {
     color: var(--color-white);
@@ -311,6 +351,12 @@
       padding-inline: calc(var(--spacing) * 6);
     }
   }
+  .sm\:text-5xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
   .md\:flex {
     @media (width >= 48rem) {
       display: flex;
@@ -326,9 +372,21 @@
       gap: calc(var(--spacing) * 12);
     }
   }
+  .md\:text-6xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-6xl);
+      line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+  }
   .lg\:px-8 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .lg\:text-7xl {
+    @media (width >= 64rem) {
+      font-size: var(--text-7xl);
+      line-height: var(--tw-leading, var(--text-7xl--line-height));
     }
   }
   .xl\:max-w-screen {
@@ -336,11 +394,17 @@
       max-width: 100vw;
     }
   }
+  .xl\:text-8xl {
+    @media (width >= 80rem) {
+      font-size: var(--text-8xl);
+      line-height: var(--tw-leading, var(--text-8xl--line-height));
+    }
+  }
 }
 .bg-blur-c {
   backdrop-filter: blur(10px);
 }
-#hoverBG {
+#banner {
   background: #00052A;
   background: radial-gradient(circle, rgba(0, 5, 42, 1) 0%, rgba(0, 0, 0, 1) 100%);
   height: 100vh;
@@ -371,13 +435,18 @@ nav {
 *::-webkit-scrollbar-thumb:active {
   background-color: #ffffff;
 }
+*::selection {
+  background-color: #ff712a;
+}
 #dividerLine {
   position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100vh;
+  display: inline-block;
   width: 2px;
   background-color: white;
+}
+.JetFonts {
+  font-family: 'JetBrains Mono';
+  font-weight: 130;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -385,6 +454,10 @@ nav {
   initial-value: solid;
 }
 @property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -429,6 +502,7 @@ nav {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-leading: initial;
+      --tw-tracking: initial;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;

@@ -1,7 +1,7 @@
 // ["#000000","#00020b","#000315","#000420","#00052a","#000735","#00083f","#000949","#000a53"]
 let nav = document.querySelector('nav');
 let isNavBarOpen = false;
-let hoverBG = document.getElementById('hoverBG');
+let banner = document.getElementById('banner');
 
 let mouseX = 0; // position to be animated
 let mouseY = 0;
@@ -18,10 +18,21 @@ function animate() {
     mouseX += (targetX - mouseX) * ease;
     mouseY += (targetY - mouseY) * ease;
 
-    hoverBG.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(0, 5, 42, 1) 0%, rgba(0, 0, 0, 1) 100%)`;
+    banner.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(0, 5, 42, 1) 0%, rgba(0, 0, 0, 1) 100%)`;
     
     // Continue the animation
     requestAnimationFrame(animate);
 }
 
 animate();
+
+banner.addEventListener('mouseover', (e)=>{
+    if(e.clientX > window.innerWidth/2){
+        document.getElementById('s-half').classList.add('tracking-wide'); 
+        document.getElementById('f-half').classList.remove('tracking-wide');
+    }
+    else{
+        document.getElementById('f-half').classList.add('tracking-wide');
+        document.getElementById('s-half').classList.remove('tracking-wide');
+    }
+})
