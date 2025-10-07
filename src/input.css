@@ -70,3 +70,10 @@ nav{
   -webkit-backdrop-filter: blur(24px);
   transition: 0.25s;
 }
+#fluidCursorElement,
+#fluidCursorContent {
+    pointer-events: none;
+}
+a{
+  cursor: none  ;
+}

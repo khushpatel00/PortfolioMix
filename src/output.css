@@ -188,17 +188,11 @@
   .fixed {
     position: fixed;
   }
-  .sticky {
-    position: sticky;
-  }
   .end-5 {
     inset-inline-end: calc(var(--spacing) * 5);
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
-  }
-  .top-2 {
-    top: calc(var(--spacing) * 2);
   }
   .top-2\/5 {
     top: calc(2/5 * 100%);
@@ -208,9 +202,6 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
@@ -248,21 +239,12 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .size-5 {
     width: calc(var(--spacing) * 5);
     height: calc(var(--spacing) * 5);
   }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
-  }
   .h-1\.5 {
     height: calc(var(--spacing) * 1.5);
-  }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
@@ -276,23 +258,14 @@
   .h-screen {
     height: 100vh;
   }
-  .w-0 {
-    width: calc(var(--spacing) * 0);
-  }
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\.5 {
     width: calc(var(--spacing) * 1.5);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
@@ -306,9 +279,6 @@
   .w-full {
     width: 100%;
   }
-  .max-w-1 {
-    max-width: calc(var(--spacing) * 1);
-  }
   .max-w-1\/5 {
     max-width: calc(1/5 * 100%);
   }
@@ -318,17 +288,8 @@
   .flex-1\/4 {
     flex: calc(1/4 * 100%);
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .cursor-crosshair {
-    cursor: crosshair;
-  }
   .cursor-none {
     cursor: none;
-  }
-  .resize {
-    resize: both;
   }
   .items-center {
     align-items: center;
@@ -361,9 +322,6 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
-  }
-  .border-gray-900 {
-    border-color: var(--color-gray-900);
   }
   .border-gray-900\/10 {
     border-color: color-mix(in srgb, oklch(21% 0.034 264.665) 10%, transparent);
@@ -426,19 +384,8 @@
       color: color-mix(in oklab, var(--color-white) 50%, transparent);
     }
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .backdrop-blur-sm {
     --tw-backdrop-blur: blur(var(--blur-sm));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -576,6 +523,12 @@ nav {
   -webkit-backdrop-filter: blur(24px);
   transition: 0.25s;
 }
+#fluidCursorElement, #fluidCursorContent {
+  pointer-events: none;
+}
+a {
+  cursor: none;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -588,11 +541,6 @@ nav {
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-backdrop-blur {
   syntax: "*";
@@ -636,7 +584,6 @@ nav {
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-tracking: initial;
-      --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
