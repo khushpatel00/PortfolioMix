@@ -62,3 +62,11 @@ nav{
   font-family: 'JetBrains Mono';
   font-weight: 130;
 }
+.glass-card {
+  /* width: 240px; */
+  /* height: 360px; */
+  background: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: 0.25s;
+}

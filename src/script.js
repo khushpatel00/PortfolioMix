@@ -2,6 +2,9 @@
 let nav = document.querySelector('nav');
 let isNavBarOpen = false;
 let banner = document.getElementById('banner');
+let fluidCursor = document.getElementById('fluidCursorElement');
+let fluidCursorContent = document.getElementById('fluidCursorContent');
+let scalerObject = document.querySelectorAll('.scalerObject');
 
 let mouseX = 0; // position to be animated
 let mouseY = 0;
@@ -18,21 +21,10 @@ function animate() {
     mouseX += (targetX - mouseX) * ease;
     mouseY += (targetY - mouseY) * ease;
 
-    banner.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(0, 5, 42, 1) 0%, rgba(0, 0, 0, 1) 100%)`;
-    
+    banner.style.background = `radial-gradient(circle at ${mouseX}px ${mouseY}px, rgba(0, 13, 71, 1) 0%, rgba(0, 0, 0, 1) 100%)`;
     // Continue the animation
     requestAnimationFrame(animate);
 }
+// console.log(fluidCursor);
 
 animate();
-
-banner.addEventListener('mouseover', (e)=>{
-    if(e.clientX > window.innerWidth/2){
-        document.getElementById('s-half').classList.add('tracking-wide'); 
-        document.getElementById('f-half').classList.remove('tracking-wide');
-    }
-    else{
-        document.getElementById('f-half').classList.add('tracking-wide');
-        document.getElementById('s-half').classList.remove('tracking-wide');
-    }
-})

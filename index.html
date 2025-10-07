@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black overflow-x-hidden">
-    <header class="fixed w-[98%] top-0 z-50 bg-black/30 backdrop-blur-sm border-b mx-5 rounded-2xl my-5 border-gray-900/10">
+<body class="bg-black overflow-x-hidden cursor-none">
+    <header class="fixed w-[95%] top-0 z-50 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%;">
         <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="md:flex md:items-center md:gap-12 gTopFade">
@@ -42,13 +42,30 @@
             </div>
         </nav>
     </div>
+    <div id="fluidCursorElement" class="absolute cursor-none w-4 h-4 rounded-full border flex z-50 justify-center items-center border-white"></div>
+    <div id="fluidCursorContent" class="absolute cursor-none w-1.5 h-1.5 rounded-full bg-white z-50"></div>
     <section class="text-white items-center flex h-screen" id="banner">
-        <h1 class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="f-half">developr</h1>
-        <div id="dividerLine" class="h-screen w-0.5 left-1/2 top-0 absolute"></div>
-        <h1 class="xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="s-half">breakr</h1>
+        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="f-half">developr</h1>
+        <div id="dividerLine" class="h-screen w-0.5 z-10 left-1/2 top-0 absolute"></div>
+        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="s-half">breakr</h1>
+
+        <div class="absolute z-0 flex top-0 left-0 w-full" style="transition: 0.35s;">
+            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+    </div>
+        <div class="absolute z-0 flex top-2/5 my-4 left-0 w-full" style="transition: 0.35s;">
+            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
+            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
+            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
+            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
+        </div>
+
     </section>
     
-    <section>
+    <section class="text-white">
     <h1>WHY ??</h1>
     </section>
 

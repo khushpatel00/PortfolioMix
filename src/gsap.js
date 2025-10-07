@@ -47,3 +47,17 @@ function navTrigger(){
         isNavBarOpen = true;
     }
 }
+document.addEventListener('mousemove', (position)=>{
+    gsap.to(fluidCursor, {
+        x:position.x - 8,
+        y:position.y - 8,
+        duration: 0.2,
+        // ease: 'back.out(1)'
+    })
+    gsap.to(fluidCursorContent, {
+        x:position.x - 3,
+        y:position.y - 3,
+        duration: 0.1,
+        // ease: 'back.out(1)'
+    })
+})
