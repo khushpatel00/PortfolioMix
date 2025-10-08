@@ -8,7 +8,6 @@
     height: 100vh;
 }
 nav{
-    /* From https://css.glass */
     background: rgba(0, 0, 0, 0.7);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -17,13 +16,6 @@ nav{
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
-/** {
-  scrollbar-width: thin;
-  scrollbar-color: #F5F5F5 #DFE9EB;
-}*/
-
-/* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
   height: 12px;
   width: 2px;
@@ -63,8 +55,6 @@ nav{
   font-weight: 130;
 }
 .glass-card {
-  /* width: 240px; */
-  /* height: 360px; */
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -76,4 +66,12 @@ nav{
 }
 a{
   cursor: none  ;
+}
+a:hover{
+  position: relative;
+  .fluidCursorElement{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }

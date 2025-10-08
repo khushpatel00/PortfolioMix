@@ -12,14 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 
-<div id="fluidCursorElement" class="fixed duration-75 cursor-none w-4 h-4 rounded-full border flex z-50 justify-center items-center border-white"></div>
+<div id="fluidCursorElement" class="fixed duration-75 cursor-none min-w-4 p-5  min-h-4 rounded-full bg-neutral-200/20 flex z-50 justify-center items-center text-white JetFonts text-nowrap"></div>
 <div id="fluidCursorContent" class="fixed cursor-none w-1.5 h-1.5 rounded-full bg-white z-50"></div>
 <body class="bg-black overflow-x-hidden cursor-none">
     <header class="fixed w-[95%] top-0 z-40 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%;">
         <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="md:flex md:items-center md:gap-12 gTopFade">
-                    <a class=" max-w-1/5 border" href="#"><img src="src/img/favicon.png" alt=""></a>
+                    <a class="max-w-1/5 border" href="#"><img src="src/img/favicon.png" class="sm:max-w-1/5 max-w-1/6 md:max-w-full"  alt=""></a>
                 </div>
                     <div class="block gTopFade cursor-none" onclick="navTrigger()">
                         <button
@@ -45,9 +45,9 @@
         </nav>
     </div>
         <section class="text-white items-center flex h-screen" id="banner">
-        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="f-half">developr</h1>
+        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2 interaction" data-cursor-text="Obviosly" style="transition: 1s;" id="f-half">developr</h1>
         <div id="dividerLine" class="h-screen w-0.5 z-10 left-1/2 top-0 absolute"></div>
-        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="s-half">breakr</h1>
+        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2 interaction" data-cursor-text="Might be" style="transition: 1s;" id="s-half">breakr</h1>
 
         <div class="absolute z-0 flex top-0 left-0 w-full" style="transition: 0.35s;">
             <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
