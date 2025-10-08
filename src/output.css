@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-neutral-600: oklch(43.9% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -197,14 +198,17 @@
   .top-2\/5 {
     top: calc(2/5 * 100%);
   }
-  .top-24 {
-    top: calc(var(--spacing) * 24);
+  .top-\[2\.5\%\] {
+    top: 2.5%;
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .left-5 {
+    left: calc(var(--spacing) * 5);
   }
   .z-0 {
     z-index: 0;
@@ -255,6 +259,9 @@
   .h-\[40vh\] {
     height: 40vh;
   }
+  .h-\[95vh\] {
+    height: 95vh;
+  }
   .h-screen {
     height: 100vh;
   }
@@ -279,6 +286,9 @@
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-1\/5 {
     max-width: calc(1/5 * 100%);
   }
@@ -287,6 +297,12 @@
   }
   .flex-1\/4 {
     flex: calc(1/4 * 100%);
+  }
+  .-rotate-1 {
+    rotate: calc(1deg * -1);
+  }
+  .rotate-1 {
+    rotate: 1deg;
   }
   .cursor-none {
     cursor: none;
@@ -344,6 +360,9 @@
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
+  .bg-neutral-600 {
+    background-color: var(--color-neutral-600);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -375,6 +394,9 @@
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
   }
+  .text-black {
+    color: var(--color-black);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -393,6 +415,19 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-75 {
+    --tw-duration: 75ms;
+    transition-duration: 75ms;
+  }
+  .duration-150 {
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
   }
   .hover\:flex-1\/12 {
     &:hover {
@@ -479,7 +514,7 @@
   height: 100vh;
 }
 nav {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.4px);
@@ -578,6 +613,10 @@ a {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -593,6 +632,7 @@ a {
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
     }
   }
 }

@@ -12,12 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-black overflow-x-hidden ">
-    <header class="fixed w-[95%] top-0 z-50 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%;">
+<div id="fluidCursorElement" class="fixed duration-75 cursor-none w-4 h-4 rounded-full border flex z-50 justify-center items-center border-white"></div>
+<div id="fluidCursorContent" class="fixed cursor-none w-1.5 h-1.5 rounded-full bg-white z-50"></div>
+<body class="bg-black overflow-x-hidden cursor-none">
+    <header class="fixed w-[95%] top-0 z-40 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%;">
         <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
             <div class="flex h-16 items-center justify-between">
                 <div class="md:flex md:items-center md:gap-12 gTopFade">
-                    <a class="block" href="#"><img src="src/img/favicon.png" class="max-w-1/5 " alt=""></a>
+                    <a class=" max-w-1/5 border" href="#"><img src="src/img/favicon.png" alt=""></a>
                 </div>
                     <div class="block gTopFade cursor-none" onclick="navTrigger()">
                         <button
@@ -31,8 +33,8 @@
             </div>
         </div>
     </header>
-    <div class="fixed top-24 end-5 z-40">
-        <nav class="text-white w-auto justify-end p-4 hidden rounded-2xl">
+    <div class="fixed top-[2.5%] left-5 end-5 z-40 ">
+        <nav class="text-white w-auto h-[95vh] justify-end p-4 hidden rounded-2xl">
             <div class="flex justify-end">
                 <ul class=" p-4 text-3xl leading-16 px-20 ">
                     <li class="gTopFadeLi"><a href="#">Home</a></li>
@@ -42,8 +44,6 @@
             </div>
         </nav>
     </div>
-        <div id="fluidCursorElement" class="absolute cursor-none w-4 h-4 rounded-full border flex z-50 justify-center items-center border-white"></div>
-        <div id="fluidCursorContent" class="absolute cursor-none w-1.5 h-1.5 rounded-full bg-white z-50"></div>
         <section class="text-white items-center flex h-screen" id="banner">
         <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s;" id="f-half">developr</h1>
         <div id="dividerLine" class="h-screen w-0.5 z-10 left-1/2 top-0 absolute"></div>
@@ -65,8 +65,11 @@
 
     </section>
     
-    <section class="text-white">
-    <h1>WHY ??</h1>
+    <div id="vertDivider1" class="bg-white w-screen h-4 rotate-1"></div>
+    <div id="vertDivider2" class="bg-neutral-600 w-screen h-4 -rotate-1"></div>
+
+    <section class="text-black bg-white">
+        
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
