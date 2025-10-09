@@ -10,7 +10,7 @@ gsap.from(".gTopFade", {
 function navTrigger() {
     if (isNavBarOpen) {
         gsap.to(nav, {
-            x: "60%",
+            // x: "60%",
             duration: 1,
             opacity: 0,
             ease: "expo.out",
@@ -21,12 +21,12 @@ function navTrigger() {
         gsap.fromTo(
             nav,
             {
-                x: "60%",
+                // x: "60%",
                 opacity: 0,
                 display: "none",
             },
             {
-                x: "0%",
+                // x: "0%",
                 duration: 1,
                 opacity: 1,
                 ease: "expo.out",
@@ -91,32 +91,22 @@ document.addEventListener("mousemove", (position) => {
 // });
 
 
-let activeTimeouts = [];
+let activeTimeouts = []; 
 
 interactions.forEach(item => {
   item.addEventListener('mouseenter', e => {
     const text = e.currentTarget.dataset.cursorText;
-    fluidCursor.textContent = '';
 
-    // clear any previous animation
-    activeTimeouts.forEach(id => clearTimeout(id));
-    activeTimeouts = [];
+    gsap.from(fluidCursor, {
+        scale: 0.7
+    })
+    fluidCursor.textContent = text;
+});
 
-    // start printing letters
-    for (let i = 0; i < text.length; i++) {
-      const t = setTimeout(() => {
-        fluidCursor.textContent += text[i];
-      }, i * 100);
-      activeTimeouts.push(t);
-    }
-  });
-
-  item.addEventListener('mouseleave', () => {
-    // cancel all timeouts immediately
-    activeTimeouts.forEach(id => clearTimeout(id));
-    activeTimeouts = [];
-
-    // clear the cursor
+item.addEventListener('mouseleave', () => {
+    gsap.from(fluidCursor, {
+        scale: 1.7
+    })
     fluidCursor.textContent = '';
   });
 });

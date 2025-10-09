@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MixFolio</title>
+        <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="src/output.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MixFolio</title>
-    <link rel="shortcut icon" href="src/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-</head>
-
-<div id="fluidCursorElement" class="fixed duration-75 cursor-none min-w-4 p-5  min-h-4 rounded-full bg-neutral-200/20 flex z-50 justify-center items-center text-white JetFonts text-nowrap"></div>
-<div id="fluidCursorContent" class="fixed cursor-none w-1.5 h-1.5 rounded-full bg-white z-50"></div>
-<body class="bg-black overflow-x-hidden cursor-none">
-    <header class="fixed w-[95%] top-0 z-40 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%;">
-        <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
-            <div class="flex h-16 items-center justify-between">
-                <div class="md:flex md:items-center md:gap-12 gTopFade">
-                    <a class="max-w-1/5 border" href="#"><img src="src/img/favicon.png" class="sm:max-w-1/5 max-w-1/6 md:max-w-full"  alt=""></a>
-                </div>
+    <div id="fluidCursorElement" class="fixed duration-75 cursor-none min-w-4 p-5 max-h-4 rounded-full bg-neutral-200/20 flex z-50 justify-center items-center text-white JetFonts text-nowrap"></div>
+    <div id="fluidCursorContent" class="fixed cursor-none w-1.5 h-1.5 rounded-full bg-white z-50"></div>
+    <body class="bg-black overflow-x-hidden cursor-none">
+        <header class="fixed w-[95%] top-0 z-40 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%">
+            <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="md:flex md:items-center md:gap-12 gTopFade">
+                        <a class="max-w-1/5" href="#"><img src="src/img/favicon.png" class="sm:max-w-1/5 max-w-1/6 md:max-w-full" alt="" /></a>
+                    </div>
                     <div class="block gTopFade cursor-none" onclick="navTrigger()">
-                        <button
-                            class="rounded-lg p-2 cursor-none transition bg-gray-900 text-white/50 hover:text-white">
+                        <button class="rounded-lg p-2 cursor-none transition bg-gray-900 text-white/50 hover:text-white" >
                             <svg class="size-5 cursor-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
@@ -31,50 +29,63 @@
                     </div>
                 </div>
             </div>
+        </header>
+        <div class="fixed top-0 left-0 z-40">
+            <nav class="relative text-white h-screen w-screen p-4 hidden">
+                <div class="flex  items-center">
+                    <button class="absolute top-0 right-0 m-8 rounded-lg p-2 cursor-none transition hover:text-white" onclick="navTrigger()">
+                        <svg class="size-5 cursor-none" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 640 640" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" />
+                        </svg>
+                    </button>
+                    <ul class="p-4 text-3xl leading-16 px-20">
+                        <li class="gTopFadeLi"><a id="navHome" href="#">Home</a></li>
+                        <li class="gTopFadeLi"><a id="navProjects" href="#">Projects</a></li>
+                        <li class="gTopFadeLi"><a id="navMore" href="#">More</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </header>
-    <div class="fixed top-[2.5%] left-5 end-5 z-40 ">
-        <nav class="text-white w-auto h-[95vh] justify-end p-4 hidden rounded-2xl">
-            <div class="flex justify-end">
-                <ul class=" p-4 text-3xl leading-16 px-20 ">
-                    <li class="gTopFadeLi"><a href="#">Home</a></li>
-                    <li class="gTopFadeLi"><a href="#">Projects</a></li>
-                    <li class="gTopFadeLi"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
         <section class="text-white items-center flex h-screen" id="banner">
-        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2 interaction" data-cursor-text="Obviosly" style="transition: 1s;" id="f-half">developr</h1>
-        <div id="dividerLine" class="h-screen w-0.5 z-10 left-1/2 top-0 absolute"></div>
-        <h1  class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2 interaction" data-cursor-text="Might be" style="transition: 1s;" id="s-half">breakr</h1>
+            <h1
+                class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2 interaction"
+                data-cursor-text="Obviosly"
+                style="transition: 1s"
+                id="f-half">
+                developr
+            </h1>
+            <div id="dividerLine" class="h-screen w-0.5 z-10 left-1/2 top-0 absolute"></div>
+            <h1
+                class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2 interaction"
+                data-cursor-text="Might be"
+                style="transition: 1s"
+                id="s-half">
+                breakr
+            </h1>
 
-        <div class="absolute z-0 flex top-0 left-0 w-full" style="transition: 0.35s;">
-            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
-            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
-            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
-            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
-            <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
-    </div>
-        <div class="absolute z-0 flex top-2/5 my-4 left-0 w-full" style="transition: 0.35s;">
-            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
-            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
-            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
-            <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block "></div>
-        </div>
+            <div class="absolute z-0 flex top-0 left-0 w-full" style="transition: 0.35s">
+                <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+                <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+                <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+                <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+                <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
+            </div>
+            <div class="absolute z-0 flex top-2/5 my-4 left-0 w-full" style="transition: 0.35s">
+                <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block"></div>
+                <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block"></div>
+                <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block"></div>
+                <div class="glass-card rounded-2xl flex-1 hover:flex-1/12 h-[40vh] m-2 block"></div>
+            </div>
+        </section>
 
-    </section>
-    
-    <div id="vertDivider1" class="bg-white w-screen h-4 rotate-1"></div>
-    <div id="vertDivider2" class="bg-neutral-600 w-screen h-4 -rotate-1"></div>
+        <div id="vertDivider1" class="bg-white w-screen h-4 rotate-1"></div>
+        <div id="vertDivider2" class="bg-neutral-600 w-screen h-4 -rotate-1"></div>
 
-    <section class="text-black bg-white">
-        
-    </section>
+        <section class="text-black bg-white"></section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-    <script src="src/script.js"></script>
-    <script src="src/gsap.js"></script>
-</body>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+        <script src="src/script.js"></script>
+        <script src="src/gsap.js"></script>
+    </body>
 </html>
