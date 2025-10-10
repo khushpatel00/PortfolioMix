@@ -48,47 +48,26 @@ document.addEventListener("mousemove", (position) => {
         x: position.x - 2,
         y: position.y - 2,
         duration: 0.1,
-        // ease: 'back.out(1)'
     });
     const cursorWidth = fluidCursor.offsetWidth;
     const cursorHeight = fluidCursor.offsetHeight;
     gsap.to(fluidCursor, {
-        // x:position.x - fluidCursorContent.clientWidth * 1.2,
-        // y:position.y - fluidCursorContent.clientHeight * 1.2,
-
         x: position.clientX - cursorWidth / 2,
         y: position.clientY - cursorHeight / 2,
     });
-
     gsap.to(vertDivider1, {
-        rotate: position.x / 1000,
+        rotate: position.x / 1300,
         duration: 0.1,
     });
     gsap.to(vertDivider2, {
-        rotate: -position.y / 500 - 2,
+        rotate: -position.y / 1000 - 2,
+        duration: 0.1,
+    });
+    gsap.to(vertDivider3, {
+        rotate: position.x / 800,
         duration: 0.1,
     });
 });
-
-// interactions.forEach((item) => {
-//     item.addEventListener("mouseenter", (e) => {
-//         const text = e.currentTarget.dataset.cursorText; // gets 'More', 'Less', etc.
-//         activeTimeouts.forEach((id) => clearTimeout(id));
-//         activeTimeouts = [];    
-//         fluidCursor.textContent = ""; // reset
-//         for (let i = 0; i < text.length; i++) {
-//             setTimeout(() => {
-//                 fluidCursor.textContent += text[i];
-//             }, i * 25); // stagger each character by 100ms
-//             activeTimeouts.push(timeoutId);F
-//         }
-//     });
-//     item.addEventListener("mouseleave", (e) => {
-//         activeTimeouts.forEach((id) => clearTimeout(id));
-//         activeTimeouts = [];
-//         fluidCursor.textContent = "";
-//     });
-// });
 
 
 let activeTimeouts = []; 

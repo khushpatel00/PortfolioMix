@@ -9,6 +9,7 @@ let fluidCursorContent = document.getElementById("fluidCursorContent");
 let scalerObject = document.querySelectorAll(".scalerObject");
 let vertDivider1 = document.querySelector("#vertDivider1");
 let vertDivider2 = document.querySelector("#vertDivider2");
+let vertDivider3 = document.querySelector("#vertDivider3");
 let interactions = document.querySelectorAll(".interaction");
 
 let mouseX = 0; // position to be animated
