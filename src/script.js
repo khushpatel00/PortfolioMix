@@ -1,5 +1,4 @@
 "use strict";
-
 // ["#000000","#00020b","#000315","#000420","#00052a","#000735","#00083f","#000949","#000a53"]
 let nav = document.querySelector("nav");
 let isNavBarOpen = false;
@@ -34,3 +33,8 @@ function animate() {
 // console.log(fluidCursor);
 
 animate();
+document.addEventListener('keydown', (key)=>{
+    // console.log(key);
+    if(key.key == 'Escape' && isNavBarOpen) navTrigger();
+    
+})

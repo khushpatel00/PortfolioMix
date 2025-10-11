@@ -7,19 +7,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-teal-200: oklch(91% 0.096 180.426);
     --color-teal-700: oklch(51.1% 0.096 186.391);
-    --color-teal-900: oklch(38.6% 0.063 188.416);
     --color-gray-900: oklch(21% 0.034 264.665);
-    --color-neutral-50: oklch(98.5% 0 0);
-    --color-neutral-200: oklch(92.2% 0 0);
     --color-neutral-300: oklch(87% 0 0);
     --color-neutral-600: oklch(43.9% 0 0);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -32,10 +26,8 @@
     --text-7xl--line-height: 1;
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
-    --font-weight-bold: 700;
     --font-weight-black: 900;
     --tracking-wide: 0.025em;
-    --tracking-widest: 0.1em;
     --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
     --blur-sm: 8px;
@@ -607,14 +599,6 @@ nav {
 }
 a {
   cursor: none;
-}
-a:hover {
-  position: relative;
-  .fluidCursorElement {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
 }
 @property --tw-border-style {
   syntax: "*";

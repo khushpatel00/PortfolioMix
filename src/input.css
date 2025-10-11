@@ -65,11 +65,3 @@ nav{
 a{
   cursor: none  ;
 }
-a:hover{
-  position: relative;
-  .fluidCursorElement{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-}
