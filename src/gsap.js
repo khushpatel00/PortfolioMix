@@ -43,18 +43,18 @@ function navTrigger() {
     }
 }
 
-document.addEventListener("mousemove", (position) => {
+document.addEventListener("mousemove", position => {
     gsap.to(fluidCursorContent, {
         x: position.x - 2,
         y: position.y - 2,
         duration: 0.1,
     });
-    const cursorWidth = fluidCursor.offsetWidth;
-    const cursorHeight = fluidCursor.offsetHeight;
     gsap.to(fluidCursor, {
-        x: position.clientX - cursorWidth / 2,
-        y: position.clientY - cursorHeight / 2,
+        x: position.clientX - (fluidCursor.offsetWidth) / 2,
+        y: position.clientY - (fluidCursor.offsetHeight) / 2,
     });
+    
+
     gsap.to(vertDivider1, {
         rotate: position.x / 1300,
         duration: 0.1,
@@ -69,6 +69,19 @@ document.addEventListener("mousemove", (position) => {
     });
 });
 
+links.forEach(e=>{
+    e.addEventListener('mouseenter', ()=>{
+        transitionBall.style.background = '#5C27E390';
+        transitionBall.style.minWidth = '300%';
+        transitionBall.style.height = '300%';
+        
+    })
+    e.addEventListener('mouseleave', ()=>{
+        transitionBall.style.minWidth = '100%';
+        transitionBall.style.height = '100%';
+        transitionBall.style.background = 'white';
+    })
+})
 
 let activeTimeouts = []; 
 
@@ -89,4 +102,3 @@ item.addEventListener('mouseleave', () => {
     fluidCursor.textContent = '';
   });
 });
-    
