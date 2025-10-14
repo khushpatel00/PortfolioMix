@@ -11,12 +11,11 @@
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
     </head>
 
-    <div id="fluidCursorElement" class="fixed duration-75 cursor-none min-w-4 p-5 max-h-4 rounded-full bg-neutral-600/50  flex z-50 justify-center items-center text-white JetFonts text-nowrap">
-    </div>
+    <div id="fluidCursorElement" class="fixed duration-75 cursor-none min-w-4 p-5 max-h-4 rounded-full bg-neutral-600/50 flex z-50 justify-center items-center text-white JetFonts text-nowrap"></div>
     <div id="fluidCursorContent" class="fixed flex justify-center items-center align-middle cursor-none w-1.5 h-1.5 rounded-full bg-[#f8f2fc] z-50 inset-shadow-sm inset-shadow-black/20">
-        <div id="transition-ball" class="h-full rounded-full bg-[#f8f2fc] inset-shadow-sm inset-shadow-black/20" style="transition: 0.2s;"></div>
+        <div id="transition-ball" class="h-full rounded-full bg-[#f8f2fc] inset-shadow-sm inset-shadow-black/20" style="transition: 0.2s"></div>
     </div>
-    <body class="bg-black overflow-x-hidden cursor-none"> 
+    <body class="bg-black overflow-x-hidden cursor-none">
         <header class="fixed w-[95%] top-0 z-40 bg-black/30 backdrop-blur-sm border-b rounded-2xl my-5 border-gray-900/10" style="margin-inline: 2.5%">
             <div class="mx-auto xl:max-w-screen px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
@@ -24,7 +23,7 @@
                         <a class="max-w-1/5 link" href="#"><img src="src/img/favicon.png" class="sm:max-w-1/5 max-w-1/6 md:max-w-full" alt="" /></a>
                     </div>
                     <div class="link block gTopFade cursor-none" onclick="navTrigger()">
-                        <button class="rounded-lg p-2 cursor-none transition bg-gray-900 text-white/50 hover:text-white" >
+                        <button class="rounded-lg p-2 cursor-none transition bg-gray-900 text-white/50 hover:text-white">
                             <svg class="size-5 cursor-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
@@ -41,7 +40,7 @@
                             <path
                                 d="M183.1 137.4C170.6 124.9 150.3 124.9 137.8 137.4C125.3 149.9 125.3 170.2 137.8 182.7L275.2 320L137.9 457.4C125.4 469.9 125.4 490.2 137.9 502.7C150.4 515.2 170.7 515.2 183.2 502.7L320.5 365.3L457.9 502.6C470.4 515.1 490.7 515.1 503.2 502.6C515.7 490.1 515.7 469.8 503.2 457.3L365.8 320L503.1 182.6C515.6 170.1 515.6 149.8 503.1 137.3C490.6 124.8 470.3 124.8 457.8 137.3L320.5 274.7L183.1 137.4z" />
                         </svg>
-                        <p class="text-white JetFonts ">{esc}</p>
+                        <p class="text-white JetFonts">{esc}</p>
                     </button>
                     <ul class="p-4 text-3xl leading-16 px-20">
                         <li class="gTopFadeLi"><a class="link" id="navHome" href="#">Home</a></li>
@@ -52,19 +51,9 @@
             </nav>
         </div>
         <section class="text-white items-center flex h-screen" id="banner">
-            <h1
-                class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2"
-                style="transition: 1s"
-                id="f-half">
-                developr
-            </h1>
+            <h1 class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s" id="f-half">developr</h1>
             <div id="dividerLine" class="h-screen w-0.5 z-10 left-1/2 top-0 absolute"></div>
-            <h1
-                class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2"
-                style="transition: 1s"
-                id="s-half">
-                breakr
-            </h1>
+            <h1 class="scalerObject xl:text-8xl lg:text-7xl z-10 md:text-6xl sm:text-5xl text-4xl tracking-wide JetFonts justify-center flex w-1/2" style="transition: 1s" id="s-half">breakr</h1>
 
             <div class="absolute z-0 flex top-0 left-0 w-full" style="transition: 0.35s">
                 <div class="glass-card rounded-2xl flex-1/4 hover:flex-2/5 h-[40vh] m-2 flex"></div>
@@ -81,17 +70,41 @@
             </div>
         </section>
         <div class="bg-[#f2f8fc] flex justify-center flex-wrap items-center">
-            
             <div id="vertDivider1" class="bg-[#f2f8fc] w-screen h-4 rotate-1"></div>
             <div id="vertDivider2" class="bg-neutral-600 w-[110vw] h-4 -rotate-0"></div>
             <div id="vertDivider3" class="bg-neutral-300 w-screen h-4 rotate-1"></div>
-    
         </div>
         <section class="text-black bg-[#f2f8fc] px-10 pt-10">
-            <h1 class="text-4xl JetFonts font-black">If you didn't knew me</h1>
-            <h1 class="text-2xl JetFonts">Im Not a developr</h1>
-            <h1 class="text-2xl JetFonts">I just make {<a href="#" class="link">functional</a>} sites</h1>
+            <h1 class="text-4xl px-5 JetFonts font-black">If you didn't knew me</h1>
+            <h1 class="text-2xl px-5 JetFonts">Im Not a developr</h1>
+            <h1 class="text-2xl px-5 JetFonts">I just make {<a href="#" class="link">functional</a>} sites</h1>
 
+            <p class="JetFonts text-4xl px-14 pt-10">I’m Khush Patel</p>
+
+            <div class="JetFonts text-4xl p-5 mt-10 getUpParent">
+                — Front-End
+                <p class="getUp inline-block duration-100 JetFonts">Developer</p>
+                &
+                <p class="getUp inline-block duration-100 JetFonts">Motion Designer</p>
+                . I build web experiences that move
+                <p class="getUp inline-block duration-100 JetFonts">visually</p>
+                and emotionally.
+            </div>
+
+            <div class="JetFonts text-3xl p-5 mt-10 bolder-parent">
+                I love experimenting with
+                <p class="bolder-element inline-block duration-100 JetFonts">UI motion</p>
+                ,
+                <p class="bolder-element inline-block duration-100 JetFonts">clip-path transitions</p>
+                , and CSS-based storytelling. Apart from development, I explore
+                <p class="bolder-element inline-block duration-100 JetFonts">Android modding</p>
+                ,
+                <p class="bolder-element inline-block duration-100 JetFonts">Linux customization</p>
+                , and music remixing in
+                <p class="bolder-element inline-block duration-100 JetFonts">FL Studio.</p>
+                <br />
+                I treat web design like rhythm — clean code, smooth motion, and perfect timing.
+            </div>
         </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>

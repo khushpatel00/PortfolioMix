@@ -11,7 +11,8 @@ function navTrigger() {
     if (isNavBarOpen) {
         gsap.to(nav, {
             // x: "60%",
-            duration: 1,
+            pixi: { blurX: 15, blurY: 15 },
+            duration: 0.3,
             opacity: 0,
             ease: "expo.out",
             display: "none",
@@ -27,7 +28,7 @@ function navTrigger() {
             },
             {
                 // x: "0%",
-                duration: 1,
+                duration: 0.3,
                 opacity: 1,
                 ease: "expo.out",
                 display: "flex",
@@ -35,25 +36,25 @@ function navTrigger() {
         );
         gsap.from(".gTopFadeLi", {
             y: -20,
-            duration: 0.5,
+            duration: 0.3,
+            filter: "blur(5px)",
             opacity: 0,
-            stagger: 0.2,
+            stagger: 0.1,
         });
         isNavBarOpen = true;
     }
 }
 
-document.addEventListener("mousemove", position => {
+document.addEventListener("mousemove", (position) => {
     gsap.to(fluidCursorContent, {
         x: position.x - 2,
         y: position.y - 2,
         duration: 0.1,
     });
     gsap.to(fluidCursor, {
-        x: position.clientX - (fluidCursor.offsetWidth) / 2,
-        y: position.clientY - (fluidCursor.offsetHeight) / 2,
+        x: position.clientX - fluidCursor.offsetWidth / 2,
+        y: position.clientY - fluidCursor.offsetHeight / 2,
     });
-    
 
     gsap.to(vertDivider1, {
         rotate: position.x / 1300,
@@ -69,36 +70,35 @@ document.addEventListener("mousemove", position => {
     });
 });
 
-links.forEach(e=>{
-    e.addEventListener('mouseenter', ()=>{
-        transitionBall.style.background = '#5C27E390';
-        transitionBall.style.minWidth = '300%';
-        transitionBall.style.height = '300%';
-        
-    })
-    e.addEventListener('mouseleave', ()=>{
-        transitionBall.style.minWidth = '100%';
-        transitionBall.style.height = '100%';
-        transitionBall.style.background = 'white';
-    })
-})
-
-let activeTimeouts = []; 
-
-interactions.forEach(item => {
-  item.addEventListener('mouseenter', e => {
-    const text = e.currentTarget.dataset.cursorText;
-
-    gsap.from(fluidCursor, {
-        scale: 0.7
-    })
-    fluidCursor.textContent = text;
+links.forEach((e) => {
+    e.addEventListener("mouseenter", () => {
+        transitionBall.style.background = "#5C27E390";
+        transitionBall.style.minWidth = "300%";
+        transitionBall.style.height = "300%";
+    });
+    e.addEventListener("mouseleave", () => {
+        transitionBall.style.minWidth = "100%";
+        transitionBall.style.height = "100%";
+        transitionBall.style.background = "white";
+    });
 });
 
-item.addEventListener('mouseleave', () => {
-    gsap.from(fluidCursor, {
-        scale: 1.7
-    })
-    fluidCursor.textContent = '';
-  });
+let activeTimeouts = [];
+
+interactions.forEach((item) => {
+    item.addEventListener("mouseenter", (e) => {
+        const text = e.currentTarget.dataset.cursorText;
+
+        gsap.from(fluidCursor, {
+            scale: 0.7,
+        });
+        fluidCursor.textContent = text;
+    });
+
+    item.addEventListener("mouseleave", () => {
+        gsap.from(fluidCursor, {
+            scale: 1.7,
+        });
+        fluidCursor.textContent = "";
+    });
 });

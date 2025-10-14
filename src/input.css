@@ -65,3 +65,14 @@ nav{
 a{
   cursor: none  ;
 }
+.getUpParent:hover{
+  .getUp{
+    transform: translateY(-10px);
+    font-weight: bolder !important;
+  }
+}
+.bolder-parent:hover{
+  .bolder-element{
+    font-weight: 300 !important;
+  }
+}
