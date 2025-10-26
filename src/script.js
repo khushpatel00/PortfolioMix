@@ -21,6 +21,7 @@ let ease = 0.1;
 document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
+
 });
 
 function animate() {
@@ -32,7 +33,15 @@ function animate() {
 }
 
 animate();
-document.addEventListener('keydown', (key)=>{
-    if(key.key == 'Escape' && isNavBarOpen) navTrigger();
-    
+document.addEventListener('keyup', (key)=>{
+    if(key.key == 'Escape') navTrigger();
 })
+banner.addEventListener('mousemove',(e)=>{
+    fluidCursor.classList.add('p-8');
+    if(e.clientX < window.innerWidth / 2)  fluidCursorContent.innerHTML = `<img src="src/img/mac_pointer.png" class="max-w-6" alt="">`;
+    else fluidCursorContent.innerHTML = '<img src="src/img/mickey_pointer.png" class="max-w-7" alt="">';
+});
+banner.addEventListener('mouseleave',(e)=>{
+    fluidCursor.classList.remove('p-8');
+    fluidCursorContent.innerHTML = '';
+});

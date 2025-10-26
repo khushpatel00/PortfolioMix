@@ -58,7 +58,8 @@ nav {
     transition: 0.25s;
 }
 #fluidCursorElement,
-#fluidCursorContent {
+#fluidCursorContent,
+.snippets {
     pointer-events: none;
 }
 a {
